@@ -1,0 +1,123 @@
+{
+  "events": [
+    {
+      "id": "gpt-2",
+      "name": "GPT-2",
+      "date": "2019-02-14",
+      "description": "Text so good they feared releasing it",
+      "category": "model"
+    },
+    {
+      "id": "gpt-3",
+      "name": "GPT-3",
+      "date": "2020-06-11",
+      "description": "Few-shot learning changes everything",
+      "category": "model"
+    },
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "date": "2022-11-30",
+      "description": "AI goes mainstream overnight",
+      "category": "model"
+    },
+    {
+      "id": "gpt-4",
+      "name": "GPT-4",
+      "date": "2023-03-14",
+      "description": "Passes the bar exam",
+      "category": "model"
+    },
+    {
+      "id": "claude-2",
+      "name": "Claude 2",
+      "date": "2023-07-11",
+      "description": "100K context—read a novel in one go",
+      "category": "model"
+    },
+    {
+      "id": "gemini-ultra",
+      "name": "Gemini Ultra",
+      "date": "2023-12-06",
+      "description": "Google enters the race",
+      "category": "model"
+    },
+    {
+      "id": "gpt-4o",
+      "name": "GPT-4o",
+      "date": "2024-05-13",
+      "description": "Voice, vision, speed—all native",
+      "category": "model"
+    },
+    {
+      "id": "opus-4-5",
+      "name": "Opus 4.5",
+      "date": "2025-11-01",
+      "description": "Extended thinking, best reasoning",
+      "category": "model"
+    },
+    {
+      "id": "gemini-3",
+      "name": "Gemini 3",
+      "date": "2025-12-11",
+      "description": "Google's next frontier model",
+      "category": "model"
+    },
+    {
+      "id": "copilot",
+      "name": "GitHub Copilot",
+      "date": "2021-06-29",
+      "description": "First AI text completion",
+      "category": "tool"
+    },
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "date": "2023-03-14",
+      "description": "The start of super tab completion",
+      "category": "tool"
+    },
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "date": "2025-02-24",
+      "description": "CLI based agent",
+      "category": "tool"
+    },
+    {
+      "id": "dall-e",
+      "name": "DALL-E",
+      "date": "2021-01-05",
+      "description": "Text to image becomes real",
+      "category": "art"
+    },
+    {
+      "id": "midjourney",
+      "name": "Midjourney",
+      "date": "2022-07-12",
+      "description": "Art direction via Discord",
+      "category": "art"
+    },
+    {
+      "id": "stable-diffusion",
+      "name": "Stable Diffusion",
+      "date": "2022-08-22",
+      "description": "Open source image generation",
+      "category": "art"
+    },
+    {
+      "id": "dall-e-3",
+      "name": "DALL-E 3",
+      "date": "2023-10-04",
+      "description": "Finally understands prompts",
+      "category": "art"
+    },
+    {
+      "id": "sora",
+      "name": "Sora",
+      "date": "2024-02-15",
+      "description": "Hollywood-quality video from text",
+      "category": "art"
+    }
+  ]
+}
