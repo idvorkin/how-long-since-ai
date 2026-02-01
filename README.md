@@ -1,6 +1,27 @@
-# React + TypeScript + Vite
+# How Long Since AI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A PWA tracking milestones in AI development.
+
+## Deployment
+
+Deployments go to [Surge.sh](https://surge.sh):
+
+| Environment | URL | Trigger |
+|-------------|-----|---------|
+| **Production** | Configured via `SURGE_DOMAIN` secret | Push to `main` |
+| **PR Preview** | `pr-{number}-{SURGE_DOMAIN}` | PR opened/updated |
+
+PR previews are automatically torn down when the PR closes.
+
+### Manual Deploy
+
+```bash
+npm run deploy  # deploys to idvorkin-how-long-since-ai.surge.sh
+```
+
+## Development
+
+Built with React + TypeScript + Vite. This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
 
