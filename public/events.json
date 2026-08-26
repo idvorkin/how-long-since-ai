@@ -5,357 +5,510 @@
       "name": "GPT-2",
       "date": "2019-02-14",
       "description": "Text so good they feared releasing it",
-      "category": "model"
+      "category": "model",
+      "vendor": "OpenAI",
+      "tier": "flagship",
+      "url": "https://openai.com/index/better-language-models/"
     },
     {
       "id": "gpt-3",
       "name": "GPT-3",
       "date": "2020-06-11",
       "description": "Few-shot learning changes everything",
-      "category": "model"
+      "category": "model",
+      "vendor": "OpenAI",
+      "tier": "flagship",
+      "url": "https://openai.com/index/language-models-are-few-shot-learners/"
     },
     {
       "id": "chatgpt",
       "name": "ChatGPT",
       "date": "2022-11-30",
       "description": "AI goes mainstream overnight",
-      "category": "model"
+      "category": "model",
+      "vendor": "OpenAI",
+      "tier": "flagship",
+      "url": "https://openai.com/index/chatgpt/"
     },
     {
       "id": "gpt-4",
       "name": "GPT-4",
       "date": "2023-03-14",
       "description": "Passes the bar exam",
-      "category": "model"
+      "category": "model",
+      "vendor": "OpenAI",
+      "tier": "flagship",
+      "url": "https://artificialanalysis.ai/models/gpt-4"
     },
     {
       "id": "chatglm-6b",
       "name": "ChatGLM-6B",
       "date": "2023-03-14",
       "description": "Open bilingual chat on a single GPU",
-      "category": "model"
+      "category": "model",
+      "vendor": "Zhipu AI",
+      "tier": "flagship",
+      "url": "https://github.com/zai-org/ChatGLM-6B"
     },
     {
       "id": "claude-2",
       "name": "Claude 2",
       "date": "2023-07-11",
       "description": "100K context—read a novel in one go",
-      "category": "model"
+      "category": "model",
+      "vendor": "Anthropic",
+      "tier": "flagship",
+      "url": "https://www.anthropic.com/news/claude-2"
     },
     {
       "id": "gemini-ultra",
       "name": "Gemini Ultra",
       "date": "2023-12-06",
       "description": "Google enters the race",
-      "category": "model"
+      "category": "model",
+      "vendor": "Google",
+      "tier": "flagship",
+      "url": "https://blog.google/technology/ai/google-gemini-ai/"
     },
     {
       "id": "glm-4",
       "name": "GLM-4",
       "date": "2024-01-16",
       "description": "Zhipu claims GPT-4 parity",
-      "category": "model"
+      "category": "model",
+      "vendor": "Zhipu AI",
+      "tier": "flagship",
+      "url": "https://github.com/zai-org/GLM-4"
     },
     {
       "id": "gpt-4o",
       "name": "GPT-4o",
       "date": "2024-05-13",
       "description": "Voice, vision, speed—all native",
-      "category": "model"
+      "category": "model",
+      "vendor": "OpenAI",
+      "tier": "flagship",
+      "url": "https://artificialanalysis.ai/models/gpt-4o"
     },
     {
       "id": "kimi-k2",
       "name": "Kimi K2",
       "date": "2025-07-11",
       "description": "A trillion parameters, openly released",
-      "category": "model"
+      "category": "model",
+      "vendor": "Moonshot AI",
+      "tier": "flagship",
+      "url": "https://artificialanalysis.ai/models/kimi-k2"
     },
     {
       "id": "glm-4-5",
       "name": "GLM-4.5",
       "date": "2025-07-28",
       "description": "355B open MoE, MIT licensed",
-      "category": "model"
+      "category": "model",
+      "vendor": "Zhipu AI",
+      "tier": "flagship",
+      "url": "https://artificialanalysis.ai/models/glm-4.5"
     },
     {
       "id": "glm-4-6",
       "name": "GLM-4.6",
       "date": "2025-09-30",
       "description": "200K context, tuned for coding",
-      "category": "model"
+      "category": "model",
+      "vendor": "Zhipu AI",
+      "tier": "incremental",
+      "url": "https://artificialanalysis.ai/models/glm-4-6"
     },
     {
       "id": "kimi-k2-thinking",
       "name": "Kimi K2 Thinking",
       "date": "2025-11-06",
       "description": "Open reasoning, hundreds of chained tool calls",
-      "category": "model"
+      "category": "model",
+      "vendor": "Moonshot AI",
+      "tier": "flagship",
+      "url": "https://artificialanalysis.ai/models/kimi-k2-thinking"
     },
     {
       "id": "opus-4-5",
       "name": "Opus 4.5",
       "date": "2025-11-24",
       "description": "Extended thinking, best reasoning",
-      "category": "model"
+      "category": "model",
+      "vendor": "Anthropic",
+      "tier": "flagship",
+      "url": "https://artificialanalysis.ai/models/claude-opus-4-5"
     },
     {
       "id": "gemini-3",
       "name": "Gemini 3",
       "date": "2025-12-11",
       "description": "Google's next frontier model",
-      "category": "model"
+      "category": "model",
+      "vendor": "Google",
+      "tier": "flagship",
+      "url": "https://artificialanalysis.ai/models/gemini-3-pro"
     },
     {
       "id": "gpt-5-2",
       "name": "GPT-5.2",
       "date": "2025-12-11",
       "description": "Shipped the same day as Gemini 3",
-      "category": "model"
+      "category": "model",
+      "vendor": "OpenAI",
+      "tier": "incremental",
+      "url": "https://artificialanalysis.ai/models/gpt-5-2"
     },
     {
       "id": "gemini-3-flash",
       "name": "Gemini 3 Flash",
       "date": "2025-12-17",
       "description": "Frontier-class speed, six days later",
-      "category": "model"
+      "category": "model",
+      "vendor": "Google",
+      "tier": "incremental",
+      "url": "https://artificialanalysis.ai/models/gemini-3-flash"
     },
     {
       "id": "glm-4-7",
       "name": "GLM-4.7",
       "date": "2025-12-22",
       "description": "Another coding step up",
-      "category": "model"
+      "category": "model",
+      "vendor": "Zhipu AI",
+      "tier": "incremental",
+      "url": "https://artificialanalysis.ai/models/glm-4-7"
     },
     {
       "id": "kimi-k2-5",
       "name": "Kimi K2.5",
       "date": "2026-01-27",
       "description": "Open weights, with a coding agent attached",
-      "category": "model"
+      "category": "model",
+      "vendor": "Moonshot AI",
+      "tier": "incremental",
+      "url": "https://artificialanalysis.ai/models/kimi-k2-5"
     },
     {
       "id": "opus-4-6",
       "name": "Opus 4.6",
       "date": "2026-02-05",
       "description": "1M context—a whole codebase at once",
-      "category": "model"
+      "category": "model",
+      "vendor": "Anthropic",
+      "tier": "incremental",
+      "url": "https://artificialanalysis.ai/models/claude-opus-4-6"
     },
     {
       "id": "gpt-5-3-codex",
       "name": "GPT-5.3-Codex",
       "date": "2026-02-05",
       "description": "Codex gets its own frontier model",
-      "category": "model"
+      "category": "model",
+      "vendor": "OpenAI",
+      "tier": "incremental",
+      "url": "https://artificialanalysis.ai/models/gpt-5-3-codex"
     },
     {
       "id": "glm-5",
       "name": "GLM-5",
       "date": "2026-02-11",
       "description": "744B open weights, trained on Huawei silicon",
-      "category": "model"
+      "category": "model",
+      "vendor": "Zhipu AI",
+      "tier": "flagship",
+      "url": "https://artificialanalysis.ai/models/glm-5"
     },
     {
       "id": "sonnet-4-6",
       "name": "Sonnet 4.6",
       "date": "2026-02-17",
       "description": "Computer use takes a big leap",
-      "category": "model"
+      "category": "model",
+      "vendor": "Anthropic",
+      "tier": "incremental",
+      "url": "https://artificialanalysis.ai/models/claude-sonnet-4-6"
     },
     {
       "id": "gemini-3-1-pro",
       "name": "Gemini 3.1 Pro",
       "date": "2026-02-19",
       "description": "The Pro line's next step, still in preview",
-      "category": "model"
+      "category": "model",
+      "vendor": "Google",
+      "tier": "incremental",
+      "url": "https://artificialanalysis.ai/models/gemini-3-1-pro-preview"
     },
     {
       "id": "gpt-5-4",
       "name": "GPT-5.4",
       "date": "2026-03-05",
       "description": "Under three months after 5.2",
-      "category": "model"
+      "category": "model",
+      "vendor": "OpenAI",
+      "tier": "incremental",
+      "url": "https://artificialanalysis.ai/models/gpt-5-4"
     },
     {
       "id": "glm-5-1",
       "name": "GLM-5.1",
       "date": "2026-04-07",
       "description": "Agentic runs measured in hours",
-      "category": "model"
+      "category": "model",
+      "vendor": "Zhipu AI",
+      "tier": "incremental",
+      "url": "https://artificialanalysis.ai/models/glm-5-1"
     },
     {
       "id": "kimi-k2-6",
       "name": "Kimi K2.6",
       "date": "2026-04-14",
       "description": "Another open coding bump",
-      "category": "model"
+      "category": "model",
+      "vendor": "Moonshot AI",
+      "tier": "incremental",
+      "url": "https://artificialanalysis.ai/models/kimi-k2-6"
     },
     {
       "id": "opus-4-7",
       "name": "Opus 4.7",
       "date": "2026-04-16",
       "description": "New tokenizer, dial-it-up 'xhigh' effort",
-      "category": "model"
+      "category": "model",
+      "vendor": "Anthropic",
+      "tier": "incremental",
+      "url": "https://artificialanalysis.ai/models/claude-opus-4-7"
     },
     {
       "id": "gpt-5-5",
       "name": "GPT-5.5",
       "date": "2026-04-23",
       "description": "Seven weeks after 5.4",
-      "category": "model"
+      "category": "model",
+      "vendor": "OpenAI",
+      "tier": "incremental",
+      "url": "https://artificialanalysis.ai/models/gpt-5-5"
     },
     {
       "id": "gemini-3-5-flash",
       "name": "Gemini 3.5 Flash",
       "date": "2026-05-19",
       "description": "Reached GA during Google I/O",
-      "category": "model"
+      "category": "model",
+      "vendor": "Google",
+      "tier": "incremental",
+      "url": "https://artificialanalysis.ai/models/gemini-3-5-flash"
     },
     {
       "id": "opus-4-8",
       "name": "Opus 4.8",
       "date": "2026-05-28",
       "description": "The next Opus, just six weeks later",
-      "category": "model"
+      "category": "model",
+      "vendor": "Anthropic",
+      "tier": "incremental",
+      "url": "https://artificialanalysis.ai/models/claude-opus-4-8"
     },
     {
       "id": "fable-5",
       "name": "Fable 5",
       "date": "2026-06-09",
       "description": "First Mythos-class model anyone can use",
-      "category": "model"
+      "category": "model",
+      "vendor": "Anthropic",
+      "tier": "flagship",
+      "url": "https://artificialanalysis.ai/models/claude-fable-5"
     },
     {
       "id": "kimi-k2-7-code",
       "name": "Kimi K2.7-Code",
       "date": "2026-06-11",
       "description": "An open coding specialist",
-      "category": "model"
+      "category": "model",
+      "vendor": "Moonshot AI",
+      "tier": "incremental",
+      "url": "https://artificialanalysis.ai/models/kimi-k2-7-code"
     },
     {
       "id": "glm-5-2",
       "name": "GLM-5.2",
       "date": "2026-06-16",
       "description": "A million tokens, lossless",
-      "category": "model"
+      "category": "model",
+      "vendor": "Zhipu AI",
+      "tier": "incremental",
+      "url": "https://artificialanalysis.ai/models/glm-5-2"
     },
     {
       "id": "sonnet-5",
       "name": "Sonnet 5",
       "date": "2026-06-30",
       "description": "First Sonnet price cut: $3/$15 to $2/$10",
-      "category": "model"
+      "category": "model",
+      "vendor": "Anthropic",
+      "tier": "incremental",
+      "url": "https://artificialanalysis.ai/models/claude-sonnet-5"
     },
     {
       "id": "gpt-5-6",
       "name": "GPT-5.6",
       "date": "2026-07-09",
       "description": "Sol, Terra and Luna—a whole family at once",
-      "category": "model"
+      "category": "model",
+      "vendor": "OpenAI",
+      "tier": "flagship",
+      "url": "https://openai.com/index/gpt-5-6/"
     },
     {
       "id": "gemini-3-6-flash",
       "name": "Gemini 3.6 Flash",
       "date": "2026-07-21",
       "description": "Same work, fewer tokens",
-      "category": "model"
+      "category": "model",
+      "vendor": "Google",
+      "tier": "incremental",
+      "url": "https://artificialanalysis.ai/models/gemini-3-6-flash"
     },
     {
       "id": "opus-5",
       "name": "Opus 5",
       "date": "2026-07-24",
       "description": "Near-Fable capability at half the price",
-      "category": "model"
+      "category": "model",
+      "vendor": "Anthropic",
+      "tier": "flagship",
+      "url": "https://artificialanalysis.ai/models/claude-opus-5"
     },
     {
       "id": "kimi-k3",
       "name": "Kimi K3",
       "date": "2026-07-27",
       "description": "2.8T params—largest open weights yet",
-      "category": "model"
+      "category": "model",
+      "vendor": "Moonshot AI",
+      "tier": "flagship",
+      "url": "https://artificialanalysis.ai/models/kimi-k3"
     },
     {
       "id": "gemini-3-7-flash",
       "name": "Gemini 3.7 Flash",
       "date": "2026-08-13",
       "description": "Google's most intelligent workhorse",
-      "category": "model"
+      "category": "model",
+      "vendor": "Google",
+      "tier": "incremental",
+      "url": "https://artificialanalysis.ai/models/gemini-3-7-flash"
     },
     {
       "id": "copilot",
       "name": "GitHub Copilot",
       "date": "2021-06-29",
       "description": "First AI text completion",
-      "category": "tool"
+      "category": "tool",
+      "vendor": "GitHub",
+      "tier": "flagship",
+      "url": "https://github.blog/news-insights/product-news/introducing-github-copilot-ai-pair-programmer/"
     },
     {
       "id": "cursor",
       "name": "Cursor",
       "date": "2023-03-14",
       "description": "The start of super tab completion",
-      "category": "tool"
+      "category": "tool",
+      "vendor": "Anysphere",
+      "tier": "flagship",
+      "url": "https://en.wikipedia.org/wiki/Cursor_(code_editor)"
     },
     {
       "id": "claude-code",
       "name": "Claude Code",
       "date": "2025-02-24",
       "description": "CLI based agent",
-      "category": "tool"
+      "category": "tool",
+      "vendor": "Anthropic",
+      "tier": "flagship",
+      "url": "https://www.anthropic.com/news/claude-3-7-sonnet"
     },
     {
       "id": "dall-e",
       "name": "DALL-E",
       "date": "2021-01-05",
       "description": "Text to image becomes real",
-      "category": "art"
+      "category": "art",
+      "vendor": "OpenAI",
+      "tier": "flagship",
+      "url": "https://openai.com/index/dall-e/"
     },
     {
       "id": "midjourney",
       "name": "Midjourney",
       "date": "2022-07-12",
       "description": "Art direction via Discord",
-      "category": "art"
+      "category": "art",
+      "vendor": "Midjourney",
+      "tier": "flagship",
+      "url": "https://en.wikipedia.org/wiki/Midjourney"
     },
     {
       "id": "stable-diffusion",
       "name": "Stable Diffusion",
       "date": "2022-08-22",
       "description": "Open source image generation",
-      "category": "art"
+      "category": "art",
+      "vendor": "Stability AI",
+      "tier": "flagship",
+      "url": "https://stability.ai/news-updates/stable-diffusion-public-release"
     },
     {
       "id": "dall-e-3",
       "name": "DALL-E 3",
       "date": "2023-10-04",
       "description": "Finally understands prompts",
-      "category": "art"
+      "category": "art",
+      "vendor": "OpenAI",
+      "tier": "flagship",
+      "url": "https://openai.com/index/dall-e-3-is-now-available-in-chatgpt-plus-and-enterprise/"
     },
     {
       "id": "sora",
       "name": "Sora",
       "date": "2024-02-15",
       "description": "Hollywood-quality video from text",
-      "category": "art"
+      "category": "art",
+      "vendor": "OpenAI",
+      "tier": "flagship",
+      "url": "https://openai.com/index/sora/"
     },
     {
       "id": "nano-banana-2",
       "name": "Nano Banana 2",
       "date": "2026-02-26",
       "description": "Gemini 3.1 Flash Image, in preview",
-      "category": "art"
+      "category": "art",
+      "vendor": "Google",
+      "tier": "flagship",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/nano-banana-2/"
     },
     {
       "id": "gemini-image-ga",
       "name": "Nano Banana 2 & Pro",
       "date": "2026-05-28",
       "description": "Gemini's image models reach GA",
-      "category": "art"
+      "category": "art",
+      "vendor": "Google",
+      "tier": "incremental",
+      "url": "https://cloud.google.com/blog/products/ai-machine-learning/nano-banana-2-and-nano-banana-pro-are-generally-available/"
     },
     {
       "id": "gemini-omni-flash",
       "name": "Gemini Omni Flash",
       "date": "2026-06-30",
       "description": "Text to 720p video, then edit by chat",
-      "category": "art"
+      "category": "art",
+      "vendor": "Google",
+      "tier": "flagship",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-flash-nano-banana-2-lite/"
     }
   ]
 }

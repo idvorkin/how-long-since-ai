@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "npm run validate && tsc -b && vite build",
+    "validate": "node scripts/validate-events.mjs",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build && cp dist/index.html dist/200.html && echo 'idvorkin-how-long-since-ai.surge.sh' > dist/CNAME",
