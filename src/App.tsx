@@ -48,6 +48,13 @@ function parseCategoryList(value: string | null): Category[] | null {
   return parts.filter((p) => categories.includes(p));
 }
 
+/** Vendors are read off the data rather than hardcoded — a new lab appearing in
+ *  events.json must not need a code change to become filterable. */
+function parseVendorList(value: string | null): string[] | null {
+  if (value === null) return null;
+  return value.split(',').filter(Boolean);
+}
+
 function getInitialEnabled(): Record<Category, boolean> {
   const params = new URLSearchParams(window.location.search);
   const show = parseCategoryList(params.get('show'));
@@ -111,6 +118,12 @@ function App() {
   const [events, setEvents] = useState<AIEvent[]>([]);
   const [enabled, setEnabled] = useState<Record<Category, boolean>>(getInitialEnabled);
   const [expanded, setExpanded] = useState<Record<Category, boolean>>(getInitialExpanded);
+  // null = "no vendor filter applied" (show all). An empty array is a
+  // different, legitimate state: Igor deselected every vendor and should see
+  // an empty list rather than silently get everything back.
+  const [vendors, setVendors] = useState<string[] | null>(() =>
+    parseVendorList(new URLSearchParams(window.location.search).get('vendors'))
+  );
 
   useEffect(() => {
     fetch('/events.json')
@@ -125,10 +138,11 @@ function App() {
 
     if (on.length < categories.length) params.set('show', on.join(','));
     if (open.length > 0) params.set('expand', open.join(','));
+    if (vendors !== null) params.set('vendors', vendors.join(','));
 
     const qs = params.toString();
     window.history.replaceState({}, '', qs ? `?${qs}` : window.location.pathname);
-  }, [enabled, expanded]);
+  }, [enabled, expanded, vendors]);
 
   const toggle = (category: Category) =>
     setEnabled((prev) => ({ ...prev, [category]: !prev[category] }));
@@ -136,17 +150,38 @@ function App() {
   const toggleExpanded = (category: Category) =>
     setExpanded((prev) => ({ ...prev, [category]: !prev[category] }));
 
+  // Only offer vendors that actually appear in the categories now showing —
+  // an Art-only view should not list labs that ship nothing but models.
+  const allVendors = useMemo(() => {
+    const set = new Set<string>();
+    events.forEach((e) => { if (enabled[e.category]) set.add(e.vendor); });
+    return [...set].sort((a, b) => a.localeCompare(b));
+  }, [events, enabled]);
+
+  const vendorOn = (v: string) => vendors === null || vendors.includes(v);
+
+  const toggleVendor = (v: string) =>
+    setVendors((prev) => {
+      const base = prev === null ? allVendors : prev;
+      const next = base.includes(v) ? base.filter((x) => x !== v) : [...base, v];
+      // back to "everything selected" collapses to null so the URL stays clean
+      return next.length === allVendors.length ? null : next;
+    });
+
   const grouped = useMemo(() => {
     const out = {} as Record<Category, { flagship: AIEvent[]; incremental: AIEvent[] }>;
     for (const cat of categories) {
-      const all = events.filter((e) => e.category === cat).sort(byDateDesc);
+      const all = events
+        .filter((e) => e.category === cat)
+        .filter((e) => vendors === null || vendors.includes(e.vendor))
+        .sort(byDateDesc);
       out[cat] = {
         flagship: all.filter((e) => e.tier === 'flagship'),
         incremental: all.filter((e) => e.tier === 'incremental'),
       };
     }
     return out;
-  }, [events]);
+  }, [events, vendors]);
 
   return (
     <div className="app">
@@ -172,6 +207,28 @@ function App() {
           </button>
         ))}
       </div>
+
+      {allVendors.length > 1 && (
+        <div className="filters filters--vendor">
+          <button
+            className={`filter-btn filter-btn--sm ${vendors === null ? 'active' : ''}`}
+            onClick={() => setVendors(null)}
+            aria-pressed={vendors === null}
+          >
+            All labs
+          </button>
+          {allVendors.map((v) => (
+            <button
+              key={v}
+              className={`filter-btn filter-btn--sm ${vendorOn(v) ? 'active' : ''}`}
+              onClick={() => toggleVendor(v)}
+              aria-pressed={vendorOn(v)}
+            >
+              {v}
+            </button>
+          ))}
+        </div>
+      )}
 
       {categories.map((category) => {
         if (!enabled[category]) return null;
