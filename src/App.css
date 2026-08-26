@@ -345,3 +345,29 @@
     transition: none;
   }
 }
+
+/* ---------- vendor sub-filter ----------
+   A second, quieter row under the category filters: smaller and neutral-toned
+   so the category row stays the primary control. Wraps rather than scrolls —
+   on a phone nine labs is three tidy rows, and a horizontal scroller hides
+   options behind a gesture people don't always discover. */
+.filters--vendor {
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: -1.25rem;
+  margin-bottom: 2rem;
+}
+
+.filter-btn--sm {
+  --btn-color: rgba(255, 255, 255, 0.55);
+  padding: 0.35rem 0.8rem;
+  /* still 44px of touch target, but visually lighter than the category row */
+  min-height: 44px;
+  font-size: 0.8rem;
+}
+
+.filter-btn--sm.active {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.45);
+  color: #fff;
+}
