@@ -315,6 +315,9 @@
   .event-main {
     flex-direction: row;
     align-items: baseline;
+    /* Reset the desktop column-axis centering — in a row it would centre
+       the name horizontally instead of vertically. */
+    justify-content: flex-start;
     gap: 0.5rem;
     min-width: 0;
     flex: 1 1 auto;
