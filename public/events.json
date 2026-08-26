@@ -29,6 +29,13 @@
       "category": "model"
     },
     {
+      "id": "chatglm-6b",
+      "name": "ChatGLM-6B",
+      "date": "2023-03-14",
+      "description": "Open bilingual chat on a single GPU",
+      "category": "model"
+    },
+    {
       "id": "claude-2",
       "name": "Claude 2",
       "date": "2023-07-11",
@@ -43,10 +50,45 @@
       "category": "model"
     },
     {
+      "id": "glm-4",
+      "name": "GLM-4",
+      "date": "2024-01-16",
+      "description": "Zhipu claims GPT-4 parity",
+      "category": "model"
+    },
+    {
       "id": "gpt-4o",
       "name": "GPT-4o",
       "date": "2024-05-13",
       "description": "Voice, vision, speed—all native",
+      "category": "model"
+    },
+    {
+      "id": "kimi-k2",
+      "name": "Kimi K2",
+      "date": "2025-07-11",
+      "description": "A trillion parameters, openly released",
+      "category": "model"
+    },
+    {
+      "id": "glm-4-5",
+      "name": "GLM-4.5",
+      "date": "2025-07-28",
+      "description": "355B open MoE, MIT licensed",
+      "category": "model"
+    },
+    {
+      "id": "glm-4-6",
+      "name": "GLM-4.6",
+      "date": "2025-09-30",
+      "description": "200K context, tuned for coding",
+      "category": "model"
+    },
+    {
+      "id": "kimi-k2-thinking",
+      "name": "Kimi K2 Thinking",
+      "date": "2025-11-06",
+      "description": "Open reasoning, hundreds of chained tool calls",
       "category": "model"
     },
     {
@@ -64,10 +106,52 @@
       "category": "model"
     },
     {
+      "id": "gpt-5-2",
+      "name": "GPT-5.2",
+      "date": "2025-12-11",
+      "description": "Shipped the same day as Gemini 3",
+      "category": "model"
+    },
+    {
+      "id": "gemini-3-flash",
+      "name": "Gemini 3 Flash",
+      "date": "2025-12-17",
+      "description": "Frontier-class speed, six days later",
+      "category": "model"
+    },
+    {
+      "id": "glm-4-7",
+      "name": "GLM-4.7",
+      "date": "2025-12-22",
+      "description": "Another coding step up",
+      "category": "model"
+    },
+    {
+      "id": "kimi-k2-5",
+      "name": "Kimi K2.5",
+      "date": "2026-01-27",
+      "description": "Open weights, with a coding agent attached",
+      "category": "model"
+    },
+    {
       "id": "opus-4-6",
       "name": "Opus 4.6",
       "date": "2026-02-05",
       "description": "1M context—a whole codebase at once",
+      "category": "model"
+    },
+    {
+      "id": "gpt-5-3-codex",
+      "name": "GPT-5.3-Codex",
+      "date": "2026-02-05",
+      "description": "Codex gets its own frontier model",
+      "category": "model"
+    },
+    {
+      "id": "glm-5",
+      "name": "GLM-5",
+      "date": "2026-02-11",
+      "description": "744B open weights, trained on Huawei silicon",
       "category": "model"
     },
     {
@@ -78,10 +162,52 @@
       "category": "model"
     },
     {
+      "id": "gemini-3-1-pro",
+      "name": "Gemini 3.1 Pro",
+      "date": "2026-02-19",
+      "description": "The Pro line's next step, still in preview",
+      "category": "model"
+    },
+    {
+      "id": "gpt-5-4",
+      "name": "GPT-5.4",
+      "date": "2026-03-05",
+      "description": "Under three months after 5.2",
+      "category": "model"
+    },
+    {
+      "id": "glm-5-1",
+      "name": "GLM-5.1",
+      "date": "2026-04-07",
+      "description": "Agentic runs measured in hours",
+      "category": "model"
+    },
+    {
+      "id": "kimi-k2-6",
+      "name": "Kimi K2.6",
+      "date": "2026-04-14",
+      "description": "Another open coding bump",
+      "category": "model"
+    },
+    {
       "id": "opus-4-7",
       "name": "Opus 4.7",
       "date": "2026-04-16",
       "description": "New tokenizer, dial-it-up 'xhigh' effort",
+      "category": "model"
+    },
+    {
+      "id": "gpt-5-5",
+      "name": "GPT-5.5",
+      "date": "2026-04-23",
+      "description": "Seven weeks after 5.4",
+      "category": "model"
+    },
+    {
+      "id": "gemini-3-5-flash",
+      "name": "Gemini 3.5 Flash",
+      "date": "2026-05-19",
+      "description": "Reached GA during Google I/O",
       "category": "model"
     },
     {
@@ -99,6 +225,20 @@
       "category": "model"
     },
     {
+      "id": "kimi-k2-7-code",
+      "name": "Kimi K2.7-Code",
+      "date": "2026-06-11",
+      "description": "An open coding specialist",
+      "category": "model"
+    },
+    {
+      "id": "glm-5-2",
+      "name": "GLM-5.2",
+      "date": "2026-06-16",
+      "description": "A million tokens, lossless",
+      "category": "model"
+    },
+    {
       "id": "sonnet-5",
       "name": "Sonnet 5",
       "date": "2026-06-30",
@@ -106,10 +246,38 @@
       "category": "model"
     },
     {
+      "id": "gpt-5-6",
+      "name": "GPT-5.6",
+      "date": "2026-07-09",
+      "description": "Sol, Terra and Luna—a whole family at once",
+      "category": "model"
+    },
+    {
+      "id": "gemini-3-6-flash",
+      "name": "Gemini 3.6 Flash",
+      "date": "2026-07-21",
+      "description": "Same work, fewer tokens",
+      "category": "model"
+    },
+    {
       "id": "opus-5",
       "name": "Opus 5",
       "date": "2026-07-24",
       "description": "Near-Fable capability at half the price",
+      "category": "model"
+    },
+    {
+      "id": "kimi-k3",
+      "name": "Kimi K3",
+      "date": "2026-07-27",
+      "description": "2.8T params—largest open weights yet",
+      "category": "model"
+    },
+    {
+      "id": "gemini-3-7-flash",
+      "name": "Gemini 3.7 Flash",
+      "date": "2026-08-13",
+      "description": "Google's most intelligent workhorse",
       "category": "model"
     },
     {
@@ -166,6 +334,27 @@
       "name": "Sora",
       "date": "2024-02-15",
       "description": "Hollywood-quality video from text",
+      "category": "art"
+    },
+    {
+      "id": "nano-banana-2",
+      "name": "Nano Banana 2",
+      "date": "2026-02-26",
+      "description": "Gemini 3.1 Flash Image, in preview",
+      "category": "art"
+    },
+    {
+      "id": "gemini-image-ga",
+      "name": "Nano Banana 2 & Pro",
+      "date": "2026-05-28",
+      "description": "Gemini's image models reach GA",
+      "category": "art"
+    },
+    {
+      "id": "gemini-omni-flash",
+      "name": "Gemini Omni Flash",
+      "date": "2026-06-30",
+      "description": "Text to 720p video, then edit by chat",
       "category": "art"
     }
   ]
