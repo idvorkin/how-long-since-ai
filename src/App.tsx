@@ -1,5 +1,5 @@
 import { useMemo, useState, useEffect } from 'react';
-import { calculateTimeSince } from './utils';
+import { calculateTimeSince, parseEventDate } from './utils';
 import './App.css';
 
 type Category = 'model' | 'tool' | 'art';
@@ -25,13 +25,15 @@ interface AIEvent {
   url?: string;
 }
 
+/** Anything under a full calendar month is counted in days — "30d" reads as
+ *  recent in a way "1m" doesn't, and this page is about how recent things are. */
 function formatTimeSince(dateStr: string): string {
-  const ts = calculateTimeSince(new Date(dateStr));
+  const ts = calculateTimeSince(parseEventDate(dateStr));
   if (ts.years > 0) {
     return ts.months > 0 ? `${ts.years}y ${ts.months}m` : `${ts.years}y`;
   }
   if (ts.months > 0) return `${ts.months}m`;
-  return `${Math.max(ts.totalDays, 0)}d`;
+  return `${ts.totalDays}d`;
 }
 
 const sectionConfig = {
@@ -55,10 +57,14 @@ function parseVendorList(value: string | null): string[] | null {
   return value.split(',').filter(Boolean);
 }
 
+/** Models are the story; Programming and Art are a click away rather than in
+ *  the way. An explicit `?show=` still wins over this. */
+const DEFAULT_ENABLED: Record<Category, boolean> = { model: true, tool: false, art: false };
+
 function getInitialEnabled(): Record<Category, boolean> {
   const params = new URLSearchParams(window.location.search);
   const show = parseCategoryList(params.get('show'));
-  if (!show) return { model: true, tool: true, art: true };
+  if (!show) return { ...DEFAULT_ENABLED };
   return {
     model: show.includes('model'),
     tool: show.includes('tool'),
@@ -136,7 +142,10 @@ function App() {
     const on = categories.filter((c) => enabled[c]);
     const open = categories.filter((c) => expanded[c]);
 
-    if (on.length < categories.length) params.set('show', on.join(','));
+    // Only spell out `show` when it differs from the default, so a fresh visit
+    // keeps a clean URL. `show=` (empty) is a real state: nothing selected.
+    const isDefaultShow = categories.every((c) => enabled[c] === DEFAULT_ENABLED[c]);
+    if (!isDefaultShow) params.set('show', on.join(','));
     if (open.length > 0) params.set('expand', open.join(','));
     if (vendors !== null) params.set('vendors', vendors.join(','));
 
@@ -152,13 +161,41 @@ function App() {
 
   // Only offer vendors that actually appear in the categories now showing —
   // an Art-only view should not list labs that ship nothing but models.
-  const allVendors = useMemo(() => {
-    const set = new Set<string>();
-    events.forEach((e) => { if (enabled[e.category]) set.add(e.vendor); });
-    return [...set].sort((a, b) => a.localeCompare(b));
+  //
+  // A lab with exactly one release in view is better known by that release's
+  // name than by the company's: the chip says "Cursor", not "Anysphere". Labs
+  // with a catalogue keep the company name, since no single release speaks for
+  // them. Chip identity stays the vendor either way, so ?vendors= URLs survive.
+  const vendorLabels = useMemo(() => {
+    const releases = new Map<string, string[]>();
+    events.forEach((e) => {
+      if (!enabled[e.category]) return;
+      const names = releases.get(e.vendor) ?? [];
+      names.push(e.name);
+      releases.set(e.vendor, names);
+    });
+    const labels: Record<string, string> = {};
+    releases.forEach((names, vendor) => {
+      labels[vendor] = names.length === 1 ? names[0] : vendor;
+    });
+    return labels;
   }, [events, enabled]);
 
+  // Sorted by what the chip actually says, not by the vendor behind it.
+  const allVendors = useMemo(
+    () => Object.keys(vendorLabels).sort((a, b) => vendorLabels[a].localeCompare(vendorLabels[b])),
+    [vendorLabels]
+  );
+
   const vendorOn = (v: string) => vendors === null || vendors.includes(v);
+
+  const allVendorsOn = vendors === null || allVendors.every((v) => vendors.includes(v));
+
+  // Cycles rather than only ever selecting everything: from "all on" it clears
+  // the board so you can build a view up from nothing, and from any partial
+  // selection it restores everything.
+  const cycleAllVendors = () =>
+    setVendors((prev) => (prev === null || allVendors.every((v) => prev.includes(v)) ? [] : null));
 
   const toggleVendor = (v: string) =>
     setVendors((prev) => {
@@ -182,6 +219,15 @@ function App() {
     }
     return out;
   }, [events, vendors]);
+
+  // Clearing every lab (or every category) is now a state you can land in
+  // deliberately or by following a shared URL. Say so rather than showing a
+  // blank page with no way to tell it apart from a broken one.
+  const nothingShowing =
+    events.length > 0 &&
+    categories.every(
+      (c) => !enabled[c] || (grouped[c].flagship.length === 0 && grouped[c].incremental.length === 0)
+    );
 
   return (
     <div className="app">
@@ -211,9 +257,10 @@ function App() {
       {allVendors.length > 1 && (
         <div className="filters filters--vendor">
           <button
-            className={`filter-btn filter-btn--sm ${vendors === null ? 'active' : ''}`}
-            onClick={() => setVendors(null)}
-            aria-pressed={vendors === null}
+            className={`filter-btn filter-btn--sm ${allVendorsOn ? 'active' : ''}`}
+            onClick={cycleAllVendors}
+            aria-pressed={allVendorsOn}
+            title={allVendorsOn ? 'Clear every lab, then add back the ones you want' : 'Show every lab'}
           >
             All labs
           </button>
@@ -223,11 +270,16 @@ function App() {
               className={`filter-btn filter-btn--sm ${vendorOn(v) ? 'active' : ''}`}
               onClick={() => toggleVendor(v)}
               aria-pressed={vendorOn(v)}
+              title={vendorLabels[v] === v ? undefined : `${vendorLabels[v]} — ${v}`}
             >
-              {v}
+              {vendorLabels[v]}
             </button>
           ))}
         </div>
+      )}
+
+      {nothingShowing && (
+        <p className="empty-note">Nothing selected — tap a category or a lab above.</p>
       )}
 
       {categories.map((category) => {
