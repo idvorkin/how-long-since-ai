@@ -14,6 +14,14 @@ interface AIEvent {
   /** Lab or company that shipped it, e.g. "OpenAI", "Moonshot AI". */
   vendor: string;
   /**
+   * Product family the release belongs to, e.g. "Kimi", "GLM", "Gemini".
+   * Distinct from `vendor` on purpose: people know Moonshot AI's models as
+   * Kimi and Zhipu's as GLM, not by the company name. Declared per release
+   * rather than inferred from the vendor, because a lab can ship more than
+   * one family — Google ships both Gemini and Nano Banana.
+   */
+  brand: string;
+  /**
    * "flagship" = a new generation / new family / a genuine first — the kind of
    * release a person who doesn't follow AI closely would still have heard about.
    * "incremental" = point releases, previews, GA-of-a-preview, size or modality
@@ -162,21 +170,32 @@ function App() {
   // Only offer vendors that actually appear in the categories now showing —
   // an Art-only view should not list labs that ship nothing but models.
   //
-  // A lab with exactly one release in view is better known by that release's
-  // name than by the company's: the chip says "Cursor", not "Anysphere". Labs
-  // with a catalogue keep the company name, since no single release speaks for
-  // them. Chip identity stays the vendor either way, so ?vendors= URLs survive.
+  // Label each chip by whatever name a person would actually recognise, in
+  // order of preference:
+  //   1. one release in view      -> that release       ("Cursor", not "Anysphere")
+  //   2. one product family       -> the family         ("Kimi", not "Moonshot AI")
+  //   3. several families         -> the company
+  // Rule 3 is doing real work: Google ships Gemini *and* Nano Banana, so it
+  // stays "Google" once Art is showing but reads "Gemini" in a models-only
+  // view. OpenAI stays "OpenAI" throughout — GPT, ChatGPT, DALL-E and Sora
+  // are four families, and no one of them speaks for the others.
+  // Chip identity stays the vendor in every case, so ?vendors= URLs survive.
   const vendorLabels = useMemo(() => {
-    const releases = new Map<string, string[]>();
+    const releases = new Map<string, AIEvent[]>();
     events.forEach((e) => {
       if (!enabled[e.category]) return;
-      const names = releases.get(e.vendor) ?? [];
-      names.push(e.name);
-      releases.set(e.vendor, names);
+      releases.set(e.vendor, [...(releases.get(e.vendor) ?? []), e]);
     });
     const labels: Record<string, string> = {};
-    releases.forEach((names, vendor) => {
-      labels[vendor] = names.length === 1 ? names[0] : vendor;
+    releases.forEach((inView, vendor) => {
+      if (inView.length === 1) {
+        labels[vendor] = inView[0].name;
+        return;
+      }
+      // A missing brand on any release means no consensus — fall back safely.
+      const brands = new Set(inView.map((e) => e.brand));
+      const only = brands.size === 1 ? [...brands][0] : null;
+      labels[vendor] = only || vendor;
     });
     return labels;
   }, [events, enabled]);

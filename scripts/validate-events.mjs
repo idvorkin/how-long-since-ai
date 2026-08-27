@@ -14,7 +14,7 @@ import { readFileSync } from 'node:fs';
 const CATEGORIES = new Set(['model', 'tool', 'art']);
 const TIERS = new Set(['flagship', 'incremental']);
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
-const REQUIRED_STRINGS = ['id', 'name', 'date', 'description', 'category', 'vendor', 'tier'];
+const REQUIRED_STRINGS = ['id', 'name', 'date', 'description', 'category', 'vendor', 'brand', 'tier'];
 
 const path = new URL('../public/events.json', import.meta.url);
 const errors = [];
