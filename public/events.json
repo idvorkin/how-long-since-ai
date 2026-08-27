@@ -7,6 +7,7 @@
       "description": "Text so good they feared releasing it",
       "category": "model",
       "vendor": "OpenAI",
+      "brand": "GPT",
       "tier": "flagship",
       "url": "https://openai.com/index/better-language-models/"
     },
@@ -17,6 +18,7 @@
       "description": "Few-shot learning changes everything",
       "category": "model",
       "vendor": "OpenAI",
+      "brand": "GPT",
       "tier": "flagship",
       "url": "https://openai.com/index/language-models-are-few-shot-learners/"
     },
@@ -27,6 +29,7 @@
       "description": "AI goes mainstream overnight",
       "category": "model",
       "vendor": "OpenAI",
+      "brand": "ChatGPT",
       "tier": "flagship",
       "url": "https://openai.com/index/chatgpt/"
     },
@@ -37,6 +40,7 @@
       "description": "Passes the bar exam",
       "category": "model",
       "vendor": "OpenAI",
+      "brand": "GPT",
       "tier": "flagship",
       "url": "https://artificialanalysis.ai/models/gpt-4"
     },
@@ -47,6 +51,7 @@
       "description": "Open bilingual chat on a single GPU",
       "category": "model",
       "vendor": "Zhipu AI",
+      "brand": "GLM",
       "tier": "flagship",
       "url": "https://github.com/zai-org/ChatGLM-6B"
     },
@@ -57,6 +62,7 @@
       "description": "100K context—read a novel in one go",
       "category": "model",
       "vendor": "Anthropic",
+      "brand": "Claude",
       "tier": "flagship",
       "url": "https://www.anthropic.com/news/claude-2"
     },
@@ -67,6 +73,7 @@
       "description": "Google enters the race",
       "category": "model",
       "vendor": "Google",
+      "brand": "Gemini",
       "tier": "flagship",
       "url": "https://blog.google/technology/ai/google-gemini-ai/"
     },
@@ -77,6 +84,7 @@
       "description": "Zhipu claims GPT-4 parity",
       "category": "model",
       "vendor": "Zhipu AI",
+      "brand": "GLM",
       "tier": "flagship",
       "url": "https://github.com/zai-org/GLM-4"
     },
@@ -87,6 +95,7 @@
       "description": "Voice, vision, speed—all native",
       "category": "model",
       "vendor": "OpenAI",
+      "brand": "GPT",
       "tier": "flagship",
       "url": "https://artificialanalysis.ai/models/gpt-4o"
     },
@@ -97,6 +106,7 @@
       "description": "A trillion parameters, openly released",
       "category": "model",
       "vendor": "Moonshot AI",
+      "brand": "Kimi",
       "tier": "flagship",
       "url": "https://artificialanalysis.ai/models/kimi-k2"
     },
@@ -107,6 +117,7 @@
       "description": "355B open MoE, MIT licensed",
       "category": "model",
       "vendor": "Zhipu AI",
+      "brand": "GLM",
       "tier": "flagship",
       "url": "https://artificialanalysis.ai/models/glm-4.5"
     },
@@ -117,6 +128,7 @@
       "description": "200K context, tuned for coding",
       "category": "model",
       "vendor": "Zhipu AI",
+      "brand": "GLM",
       "tier": "incremental",
       "url": "https://artificialanalysis.ai/models/glm-4-6"
     },
@@ -127,6 +139,7 @@
       "description": "Open reasoning, hundreds of chained tool calls",
       "category": "model",
       "vendor": "Moonshot AI",
+      "brand": "Kimi",
       "tier": "flagship",
       "url": "https://artificialanalysis.ai/models/kimi-k2-thinking"
     },
@@ -137,6 +150,7 @@
       "description": "Extended thinking, best reasoning",
       "category": "model",
       "vendor": "Anthropic",
+      "brand": "Claude",
       "tier": "flagship",
       "url": "https://artificialanalysis.ai/models/claude-opus-4-5"
     },
@@ -147,6 +161,7 @@
       "description": "Google's next frontier model",
       "category": "model",
       "vendor": "Google",
+      "brand": "Gemini",
       "tier": "flagship",
       "url": "https://artificialanalysis.ai/models/gemini-3-pro"
     },
@@ -157,6 +172,7 @@
       "description": "Shipped the same day as Gemini 3",
       "category": "model",
       "vendor": "OpenAI",
+      "brand": "GPT",
       "tier": "incremental",
       "url": "https://artificialanalysis.ai/models/gpt-5-2"
     },
@@ -167,6 +183,7 @@
       "description": "Frontier-class speed, six days later",
       "category": "model",
       "vendor": "Google",
+      "brand": "Gemini",
       "tier": "incremental",
       "url": "https://artificialanalysis.ai/models/gemini-3-flash"
     },
@@ -177,6 +194,7 @@
       "description": "Another coding step up",
       "category": "model",
       "vendor": "Zhipu AI",
+      "brand": "GLM",
       "tier": "incremental",
       "url": "https://artificialanalysis.ai/models/glm-4-7"
     },
@@ -187,6 +205,7 @@
       "description": "Open weights, with a coding agent attached",
       "category": "model",
       "vendor": "Moonshot AI",
+      "brand": "Kimi",
       "tier": "incremental",
       "url": "https://artificialanalysis.ai/models/kimi-k2-5"
     },
@@ -197,6 +216,7 @@
       "description": "1M context—a whole codebase at once",
       "category": "model",
       "vendor": "Anthropic",
+      "brand": "Claude",
       "tier": "incremental",
       "url": "https://artificialanalysis.ai/models/claude-opus-4-6"
     },
@@ -207,6 +227,7 @@
       "description": "Codex gets its own frontier model",
       "category": "model",
       "vendor": "OpenAI",
+      "brand": "GPT",
       "tier": "incremental",
       "url": "https://artificialanalysis.ai/models/gpt-5-3-codex"
     },
@@ -217,6 +238,7 @@
       "description": "744B open weights, trained on Huawei silicon",
       "category": "model",
       "vendor": "Zhipu AI",
+      "brand": "GLM",
       "tier": "flagship",
       "url": "https://artificialanalysis.ai/models/glm-5"
     },
@@ -227,6 +249,7 @@
       "description": "Computer use takes a big leap",
       "category": "model",
       "vendor": "Anthropic",
+      "brand": "Claude",
       "tier": "incremental",
       "url": "https://artificialanalysis.ai/models/claude-sonnet-4-6"
     },
@@ -237,6 +260,7 @@
       "description": "The Pro line's next step, still in preview",
       "category": "model",
       "vendor": "Google",
+      "brand": "Gemini",
       "tier": "incremental",
       "url": "https://artificialanalysis.ai/models/gemini-3-1-pro-preview"
     },
@@ -247,6 +271,7 @@
       "description": "Under three months after 5.2",
       "category": "model",
       "vendor": "OpenAI",
+      "brand": "GPT",
       "tier": "incremental",
       "url": "https://artificialanalysis.ai/models/gpt-5-4"
     },
@@ -257,6 +282,7 @@
       "description": "Agentic runs measured in hours",
       "category": "model",
       "vendor": "Zhipu AI",
+      "brand": "GLM",
       "tier": "incremental",
       "url": "https://artificialanalysis.ai/models/glm-5-1"
     },
@@ -267,6 +293,7 @@
       "description": "Another open coding bump",
       "category": "model",
       "vendor": "Moonshot AI",
+      "brand": "Kimi",
       "tier": "incremental",
       "url": "https://artificialanalysis.ai/models/kimi-k2-6"
     },
@@ -277,6 +304,7 @@
       "description": "New tokenizer, dial-it-up 'xhigh' effort",
       "category": "model",
       "vendor": "Anthropic",
+      "brand": "Claude",
       "tier": "incremental",
       "url": "https://artificialanalysis.ai/models/claude-opus-4-7"
     },
@@ -287,6 +315,7 @@
       "description": "Seven weeks after 5.4",
       "category": "model",
       "vendor": "OpenAI",
+      "brand": "GPT",
       "tier": "incremental",
       "url": "https://artificialanalysis.ai/models/gpt-5-5"
     },
@@ -297,6 +326,7 @@
       "description": "Reached GA during Google I/O",
       "category": "model",
       "vendor": "Google",
+      "brand": "Gemini",
       "tier": "incremental",
       "url": "https://artificialanalysis.ai/models/gemini-3-5-flash"
     },
@@ -307,6 +337,7 @@
       "description": "The next Opus, just six weeks later",
       "category": "model",
       "vendor": "Anthropic",
+      "brand": "Claude",
       "tier": "incremental",
       "url": "https://artificialanalysis.ai/models/claude-opus-4-8"
     },
@@ -317,6 +348,7 @@
       "description": "First Mythos-class model anyone can use",
       "category": "model",
       "vendor": "Anthropic",
+      "brand": "Claude",
       "tier": "flagship",
       "url": "https://artificialanalysis.ai/models/claude-fable-5"
     },
@@ -327,6 +359,7 @@
       "description": "An open coding specialist",
       "category": "model",
       "vendor": "Moonshot AI",
+      "brand": "Kimi",
       "tier": "incremental",
       "url": "https://artificialanalysis.ai/models/kimi-k2-7-code"
     },
@@ -337,8 +370,31 @@
       "description": "A million tokens, lossless",
       "category": "model",
       "vendor": "Zhipu AI",
+      "brand": "GLM",
       "tier": "incremental",
       "url": "https://artificialanalysis.ai/models/glm-5-2"
+    },
+    {
+      "id": "glm-5-3",
+      "name": "GLM-5.3",
+      "date": "2026-08-14",
+      "description": "Emergent cyber skills delayed the open weights",
+      "category": "model",
+      "vendor": "Zhipu AI",
+      "brand": "GLM",
+      "tier": "incremental",
+      "url": "https://artificialanalysis.ai/models/glm-5-3"
+    },
+    {
+      "id": "glm-5-3-flash",
+      "name": "GLM-5.3-Flash",
+      "date": "2026-08-26",
+      "description": "First multimodal GLM, MIT weights day one",
+      "category": "model",
+      "vendor": "Zhipu AI",
+      "brand": "GLM",
+      "tier": "incremental",
+      "url": "https://artificialanalysis.ai/models/glm-5-3-flash"
     },
     {
       "id": "sonnet-5",
@@ -347,6 +403,7 @@
       "description": "First Sonnet price cut: $3/$15 to $2/$10",
       "category": "model",
       "vendor": "Anthropic",
+      "brand": "Claude",
       "tier": "incremental",
       "url": "https://artificialanalysis.ai/models/claude-sonnet-5"
     },
@@ -357,6 +414,7 @@
       "description": "Sol, Terra and Luna—a whole family at once",
       "category": "model",
       "vendor": "OpenAI",
+      "brand": "GPT",
       "tier": "flagship",
       "url": "https://openai.com/index/gpt-5-6/"
     },
@@ -367,6 +425,7 @@
       "description": "Same work, fewer tokens",
       "category": "model",
       "vendor": "Google",
+      "brand": "Gemini",
       "tier": "incremental",
       "url": "https://artificialanalysis.ai/models/gemini-3-6-flash"
     },
@@ -377,6 +436,7 @@
       "description": "Near-Fable capability at half the price",
       "category": "model",
       "vendor": "Anthropic",
+      "brand": "Claude",
       "tier": "flagship",
       "url": "https://artificialanalysis.ai/models/claude-opus-5"
     },
@@ -387,6 +447,7 @@
       "description": "2.8T params—largest open weights yet",
       "category": "model",
       "vendor": "Moonshot AI",
+      "brand": "Kimi",
       "tier": "flagship",
       "url": "https://artificialanalysis.ai/models/kimi-k3"
     },
@@ -397,6 +458,7 @@
       "description": "Google's most intelligent workhorse",
       "category": "model",
       "vendor": "Google",
+      "brand": "Gemini",
       "tier": "incremental",
       "url": "https://artificialanalysis.ai/models/gemini-3-7-flash"
     },
@@ -407,6 +469,7 @@
       "description": "First AI text completion",
       "category": "tool",
       "vendor": "GitHub",
+      "brand": "GitHub Copilot",
       "tier": "flagship",
       "url": "https://github.blog/news-insights/product-news/introducing-github-copilot-ai-pair-programmer/"
     },
@@ -417,6 +480,7 @@
       "description": "The start of super tab completion",
       "category": "tool",
       "vendor": "Anysphere",
+      "brand": "Cursor",
       "tier": "flagship",
       "url": "https://en.wikipedia.org/wiki/Cursor_(code_editor)"
     },
@@ -427,6 +491,7 @@
       "description": "CLI based agent",
       "category": "tool",
       "vendor": "Anthropic",
+      "brand": "Claude",
       "tier": "flagship",
       "url": "https://www.anthropic.com/news/claude-3-7-sonnet"
     },
@@ -437,6 +502,7 @@
       "description": "Text to image becomes real",
       "category": "art",
       "vendor": "OpenAI",
+      "brand": "DALL-E",
       "tier": "flagship",
       "url": "https://openai.com/index/dall-e/"
     },
@@ -447,6 +513,7 @@
       "description": "Art direction via Discord",
       "category": "art",
       "vendor": "Midjourney",
+      "brand": "Midjourney",
       "tier": "flagship",
       "url": "https://en.wikipedia.org/wiki/Midjourney"
     },
@@ -457,6 +524,7 @@
       "description": "Open source image generation",
       "category": "art",
       "vendor": "Stability AI",
+      "brand": "Stable Diffusion",
       "tier": "flagship",
       "url": "https://stability.ai/news-updates/stable-diffusion-public-release"
     },
@@ -467,6 +535,7 @@
       "description": "Finally understands prompts",
       "category": "art",
       "vendor": "OpenAI",
+      "brand": "DALL-E",
       "tier": "flagship",
       "url": "https://openai.com/index/dall-e-3-is-now-available-in-chatgpt-plus-and-enterprise/"
     },
@@ -477,6 +546,7 @@
       "description": "Hollywood-quality video from text",
       "category": "art",
       "vendor": "OpenAI",
+      "brand": "Sora",
       "tier": "flagship",
       "url": "https://openai.com/index/sora/"
     },
@@ -487,6 +557,7 @@
       "description": "Gemini 3.1 Flash Image, in preview",
       "category": "art",
       "vendor": "Google",
+      "brand": "Nano Banana",
       "tier": "flagship",
       "url": "https://blog.google/innovation-and-ai/technology/ai/nano-banana-2/"
     },
@@ -497,6 +568,7 @@
       "description": "Gemini's image models reach GA",
       "category": "art",
       "vendor": "Google",
+      "brand": "Nano Banana",
       "tier": "incremental",
       "url": "https://cloud.google.com/blog/products/ai-machine-learning/nano-banana-2-and-nano-banana-pro-are-generally-available/"
     },
@@ -507,6 +579,7 @@
       "description": "Text to 720p video, then edit by chat",
       "category": "art",
       "vendor": "Google",
+      "brand": "Gemini",
       "tier": "flagship",
       "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-flash-nano-banana-2-lite/"
     }

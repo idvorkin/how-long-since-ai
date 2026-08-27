@@ -4,6 +4,39 @@
 
 A PWA tracking milestones in AI development.
 
+## The data
+
+Every release lives in [`public/events.json`](public/events.json), validated on
+each build by `npm run validate`. Each entry needs an `id`, `name`, `date`
+(`YYYY-MM-DD`), `description`, `category` (`model` | `tool` | `art`), `vendor`,
+`brand`, and `tier` — plus an optional `url` for the deep-dive link.
+
+`vendor` is the company; `brand` is the product family. They differ on purpose:
+a lab's chip is labelled by its brand when every release in view shares one
+("Kimi" rather than "Moonshot AI", "GLM" rather than "Zhipu AI"), and falls back
+to the company name when it ships more than one family — Google ships both
+Gemini and Nano Banana.
+
+`tier` decides what shows by default: `flagship` for a new generation, family,
+or genuine first — the kind of release someone who doesn't follow AI would still
+have heard about — and `incremental` for point releases, previews, GA-of-a-
+preview, size or modality variants, and price changes. Incrementals are
+collapsed behind an expander.
+
+### Where to find new releases
+
+- **[openrouter.ai/models](https://openrouter.ai/models)** — live catalog across
+  every lab. `https://openrouter.ai/api/v1/models` returns the same list as JSON
+  with a `created` timestamp per model, which is the quickest way to spot what
+  has appeared since the last refresh.
+- **[artificialanalysis.ai/models](https://artificialanalysis.ai/models)** —
+  independent benchmarks, and the source of most `url` links here.
+
+Prefer the lab's own announcement date over a catalog listing date when they
+disagree; catalogs often lag the announcement by days (GLM-5.3 was announced
+Aug 14 2026 but listed on OpenRouter Aug 18, because the weights were held
+back). Don't guess a date — leave the release out until one can be sourced.
+
 ## Deployment
 
 Deployments go to [Surge.sh](https://surge.sh):
