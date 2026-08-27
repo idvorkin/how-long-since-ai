@@ -1,5 +1,7 @@
 # How Long Since AI
 
+**Live: [idvorkin-how-long-since-ai.surge.sh](https://idvorkin-how-long-since-ai.surge.sh)**
+
 A PWA tracking milestones in AI development.
 
 ## Deployment
@@ -8,8 +10,8 @@ Deployments go to [Surge.sh](https://surge.sh):
 
 | Environment | URL | Trigger |
 |-------------|-----|---------|
-| **Production** | Configured via `SURGE_DOMAIN` secret | Push to `main` |
-| **PR Preview** | `pr-{number}-{SURGE_DOMAIN}` | PR opened/updated |
+| **Production** | [idvorkin-how-long-since-ai.surge.sh](https://idvorkin-how-long-since-ai.surge.sh) | Push to `main` |
+| **PR Preview** | `pr-{number}-idvorkin-how-long-since-ai.surge.sh` | PR opened/updated |
 
 PR previews are automatically torn down when the PR closes.
 
